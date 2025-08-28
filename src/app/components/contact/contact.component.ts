@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  mobileNumber: string = '+91 9776718582';
   constructor() { }
 
   ngOnInit() {
