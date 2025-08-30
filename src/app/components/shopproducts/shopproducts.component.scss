@@ -1,0 +1,73 @@
+@mixin flex($justify:flex-start, $align:stretch) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.shop-products{
+    .shop-init-section{
+        padding-inline: 2rem;
+        padding-bottom: 2rem;
+        .shop-title{
+            text-align: center;
+        }
+        
+        .shop-main-title{
+            font-family: "Story Script", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--primaryColor);
+        }
+
+        .shop-sub-title{
+            margin-block: 1.5rem;
+            color: grey;
+            letter-spacing: 1px;
+        }
+
+        .shop-img{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+
+            .shpmdiv{
+                .shop-product-details{
+                    @include flex(center, center);
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    .shop-product-name{
+                        font-weight: 700;
+                        font-size: 1rem;
+                    }
+                    .shop-product-qty{
+                        @include flex(center, center);
+                        .shop-qty{
+                            font-weight: 800;
+                            font-size: 1.5rem;
+                            width: 7rem;
+                            background-color: var(--primaryColor);
+                            color: white;
+                            border-radius: 0.9rem;
+                            padding: 3px;
+                            text-align: center;
+                        }
+                    }
+                    .shop-product-price{
+                        font-weight: 900;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            img{
+                width: 100%;
+                border-radius: 1rem;
+                height: 57vh;
+            }
+        }
+    }
+    
+}
