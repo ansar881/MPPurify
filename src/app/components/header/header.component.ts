@@ -46,6 +46,11 @@ export class HeaderComponent implements OnInit {
         queryParams: {from: 'header-comp', to: 'greenpromise-comp' }
       })
       break;
+      case 'shopp':
+      this.router.navigate(['shopp'], {
+        queryParams: {from: 'header-comp', to: 'shopproducts-comp' }
+      })
+      break;
       
       default:
     }
