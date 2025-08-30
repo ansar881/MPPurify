@@ -8,5 +8,6 @@ export const routes: Routes = [
     { path: 'contact', loadComponent: ()=>import('./components/contact/contact.component').then(m=>m.ContactComponent)},
     { path: 'faqs', loadComponent: ()=>import('./components/faqs/faqs.component').then(m=>m.FaqsComponent)},
     { path: 'advertise', loadComponent: ()=>import('./components/advertise/advertise.component').then(m=>m.AdvertiseComponent)},
+    { path: 'greenp', loadComponent: ()=>import('./components/greenpromise/greenpromise.component').then(m=>m.GreenpromiseComponent)},
     { path: '**', component: PagenotfoundComponent}
 ];

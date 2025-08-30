@@ -41,6 +41,12 @@ export class HeaderComponent implements OnInit {
           queryParams: {from: 'header-comp', to: 'contact-comp' }
         })
         break;
+      case 'greenp':
+      this.router.navigate(['greenp'], {
+        queryParams: {from: 'header-comp', to: 'greenpromise-comp' }
+      })
+      break;
+      
       default:
     }
     if(frm)this.toggleSidebar();
