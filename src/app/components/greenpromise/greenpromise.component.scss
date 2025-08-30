@@ -1,0 +1,67 @@
+@mixin flex($justify:flex-start, $align:stretch) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.green-promise{
+    .green-desk-section{
+        height: 89vh;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .green-mid-section{
+        text-align: center;
+        padding-block: 4rem;
+        img{
+            height: 61vh;
+            width: 73vw
+        }
+    }
+
+    .green-init-section{
+        padding-inline: 2rem;
+        padding-bottom: 2rem;
+        .green-title{
+            text-align: center;
+        }
+        
+        .green-main-title{
+            font-family: "Story Script", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--primaryColor);
+        }
+
+        .green-sub-title{
+            margin-block: 1.5rem;
+            color: grey;
+            letter-spacing: 1px;
+        }
+
+        .green-img{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+
+            img{
+                width: 100%;
+                border-radius: 1rem;
+                height: 57vh;
+            }
+        }
+
+        .green-about{
+            text-align: center;
+            margin-block: 3rem;
+            font-size: 1.2rem;
+            color: #333333;
+        }
+    }
+}
