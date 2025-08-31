@@ -36,11 +36,16 @@
 }
 
 .tab:hover{
-    text-decoration: underline;
     cursor: pointer;
     // &:hover{
     //     transition: text-decoration 2s;
     // }
+}
+
+.tab.active {
+    color: var(--primaryColor);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .touch{

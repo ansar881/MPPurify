@@ -7,7 +7,7 @@
 .shop-products{
     .shop-init-section{
         padding-inline: 2rem;
-        padding-bottom: 2rem;
+        padding-block: 3rem;
         .shop-title{
             text-align: center;
         }
@@ -34,10 +34,20 @@
             gap: 1rem;
 
             .shpmdiv{
+                border-radius: 1rem;
+                background-color: #ceffce;
+                padding-bottom: 1.5rem;
+                cursor: pointer;
+                &:hover{
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    transform: scale(1.05);
+                    transition: all 0.5s ease;
+                }
                 .shop-product-details{
                     @include flex(center, center);
                     flex-direction: column;
                     gap: 0.5rem;
+                    margin-top: 1.5rem;
                     .shop-product-name{
                         font-weight: 700;
                         font-size: 1rem;
@@ -64,7 +74,7 @@
 
             img{
                 width: 100%;
-                border-radius: 1rem;
+                border-radius: 1rem 1rem 0 0;
                 height: 57vh;
             }
         }

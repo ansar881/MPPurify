@@ -26,9 +26,9 @@ export class HeaderComponent implements OnInit {
           queryParams: {from: 'header-comp', to: 'home-comp' }
         })
         break;
-      case 'adv':
-        this.router.navigate(['advertise'], {
-          queryParams: {from: 'header-comp', to: 'advertise-comp' }
+      case 'about':
+        this.router.navigate(['about'], {
+          queryParams: {from: 'header-comp', to: 'about-comp' }
         })
         break;
       case 'faq':
@@ -59,5 +59,9 @@ export class HeaderComponent implements OnInit {
 
   toggleSidebar() {
     this.sidebar = !this.sidebar;
+  }
+
+  isActive(route: string): boolean {
+    return this.router.url.includes(route);
   }
 }

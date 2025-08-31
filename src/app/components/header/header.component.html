@@ -6,12 +6,11 @@
     <div [class.open]="sidebar" class="sidebar">
       <div class="top" (click)="toggleSidebar()">X <span class="sidebarTitle">MPPurify</span></div>
       <div class="navs" (click)="tabClicked('home', true)">Home</div>
-      <div class="navs" (click)="tabClicked('greenp', true)">Greener Promise</div>
-      <div class="navs" (click)="tabClicked('shopp', true)">Shop Products</div>
-      <div class="navs" (click)="tabClicked('home', true)">Brands</div>
-      <div class="navs" (click)="tabClicked('adv', true)">Advertise</div>
+      <div class="navs" (click)="tabClicked('about', true)">About</div>
+      <div class="navs" (click)="tabClicked('shopp', true)">Products</div>
+      <div class="navs" (click)="tabClicked('greenp', true)">Eco-Bond</div>
       <div class="navs" (click)="tabClicked('faq', true)">FAQs</div>
-      <div class="navs" (click)="tabClicked('cont', true)">Contacts</div>
+      <div class="navs" (click)="tabClicked('cont', true)">Contact Us</div>
     </div>
     <div class="title">
       <!-- <span class="free">free</span> -->
@@ -20,13 +19,12 @@
       <span class="all">Purify</span>
     </div>
     <div class="tabs">
-      <div class="home tab" (click)="tabClicked('home')">Home</div>
-      <div class="greener tab" (click)="tabClicked('greenp')">Greener Promise</div>
-      <div class="shopp tab" (click)="tabClicked('shopp')">Shop Products</div>
-      <div class="brands tab" (click)="tabClicked('home')">Brands</div>
-      <div class="adv tab" (click)="tabClicked('adv')">Advertise</div>
-      <div class="faq tab" (click)="tabClicked('faq')">FAQs</div>
-      <div class="cont tab" (click)="tabClicked('cont')">Contacts</div>
+      <div class="home tab" [class.active]="isActive('home')" (click)="tabClicked('home')">Home</div>
+      <div class="about tab" [class.active]="isActive('about')" (click)="tabClicked('about')">About</div>
+      <div class="shopp tab" [class.active]="isActive('shopp')" (click)="tabClicked('shopp')">Products</div>
+      <div class="greener tab" [class.active]="isActive('greenp')" (click)="tabClicked('greenp')">Eco-Bond</div>
+      <div class="faq tab" [class.active]="isActive('faq')" (click)="tabClicked('faq')">FAQs</div>
+      <div class="cont tab" [class.active]="isActive('cont')" (click)="tabClicked('cont')">Contact Us</div>
     </div>
   </div>
   <div class="touch" (click)="getInTouch()">GET IN TOUCH</div>
