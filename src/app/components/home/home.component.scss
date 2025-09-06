@@ -188,6 +188,11 @@
         font-weight: 700;
         margin-bottom: 3rem;
         margin-top: 4rem;
+        font-family: "Story Script", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: var(--primaryColor);
     }
 
     .advTxt-body{
@@ -198,8 +203,8 @@
     }
 
     .punch-line{
-        margin-bottom: 4rem;
-        margin-top: 5rem;
+        margin-bottom: 2rem;
+        // margin-top: 5rem;
     }
 }
 
@@ -228,10 +233,35 @@
     .oper-img{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        cursor: pointer;
 
         img{
             width: 100%;
             border-radius: 1rem;
+        }
+
+        .opImdiv{
+            position: relative;
+            overflow: hidden;
+
+            .oper-comment-div{
+                position: absolute;
+                bottom: 1.5rem;
+                left: 1.5rem;
+
+                .oper-comment-num{
+                    color: var(--primaryColor);
+                    font-size: 3rem;
+                    letter-spacing: 1px;
+                    font-weight: 700;
+                }
+
+                .oper-comment-title{
+                    color: yellow;
+                    font-weight: 600;
+                    font-size: 1.2rem;
+                }
+            }
         }
     }
 
@@ -241,6 +271,19 @@
         font-size: 1.2rem;
         color: #333333;
     }
+}
+
+.metric-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.metric-number{
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--primaryColor);
 }
 
 @media(max-width:768px){
