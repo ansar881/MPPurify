@@ -25,6 +25,7 @@
     .green-init-section{
         padding-inline: 2rem;
         padding-bottom: 2rem;
+
         .green-title{
             text-align: center;
         }
@@ -62,6 +63,43 @@
             margin-block: 3rem;
             font-size: 1.2rem;
             color: #333333;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .green-promise{
+        .green-desk-section{
+            img{
+            }
+        }
+
+        .green-mid-section{
+            padding-block: 2rem;
+
+            img{
+                height: 51vh;
+                width: 84vw;
+            }
+        }
+
+        .green-init-section{
+            padding-inline: 1rem;
+            padding-bottom: 1rem;
+            .green-title{
+                .green-main-title{
+                    font-size: 2.3rem;
+                }
+
+                .green-sub-title{
+                    margin-block: 1rem;
+                }
+            }
+
+            .green-img{
+                grid-template-columns: 1fr;
+            }
+            
         }
     }
 }

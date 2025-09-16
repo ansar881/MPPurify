@@ -81,3 +81,41 @@
     }
     
 }
+
+@media(max-width:768px){
+    .shop-products{
+        .shop-init-section{
+            padding: 1rem;
+            .shop-title{
+                .shop-main-title{
+                    font-size: 2.3rem;
+                }
+            }
+
+            .shop-sub-title{
+                margin-block: 1rem;
+            }
+
+            .shop-img{
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+
+                .shpmdiv{
+                    padding-bottom: 1rem;
+                    &:hover{
+                        transform: none;
+                    }
+                    .shop-product-details{
+                        .shop-product-name{
+                            text-align: center;
+                        }
+                    }
+                }
+
+                img{
+                    height: 45vh;
+                }
+            }
+        }
+    }
+}
