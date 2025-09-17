@@ -1,0 +1,46 @@
+.aboutus{
+    .toph{
+
+        .imgdivtoph{
+            position: relative;
+            height: 89vh;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+            .toph-title{
+                position: absolute;
+                top: 63%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                text-align: center;
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+                width: 70%;
+                font-family: "Roboto", sans-serif;
+            }
+        }
+    }
+
+    .about-details{
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        padding: 1.5rem 6rem;
+
+        .journey-title{
+            font-size: 1.7rem;
+            font-weight: 600;
+            font-family: "Roboto", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .journey-content{
+            text-align: center;
+        }
+    }
+}
