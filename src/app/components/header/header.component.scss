@@ -15,9 +15,14 @@
 
 .title{
     margin-left: 5rem;
-    font-size: 1.5rem;
-    .free, .aqua, .for, .all{
-        font-family: cursive !important;
+    // font-size: 1.5rem;
+    // .free, .aqua, .for, .all{
+    //     font-family: cursive !important;
+    // }
+    img{
+        height: 2.3rem;
+        width: 9rem;
+        mix-blend-mode: multiply;
     }
 }
 

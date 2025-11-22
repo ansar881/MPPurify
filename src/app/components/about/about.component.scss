@@ -30,7 +30,7 @@
         display: grid;
         justify-items: center;
         gap: 1rem;
-        padding: 1.5rem 6rem;
+        padding: 1.5rem 10rem;
 
         .journey-title{
             font-size: 1.7rem;
@@ -41,6 +41,13 @@
 
         .journey-content{
             text-align: center;
+        }
+
+        .kyePdetails{
+            background-color: var(--lightPrimary);
+            height: 85vh;
+            width: 100%;
+            border-radius: 2rem;
         }
     }
 }
