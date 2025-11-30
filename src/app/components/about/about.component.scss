@@ -44,10 +44,100 @@
         }
 
         .kyePdetails{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             background-color: var(--lightPrimary);
-            height: 85vh;
+            height: 51vh;
             width: 100%;
             border-radius: 2rem;
+            align-items: center;
+            justify-items: center;
+
+            
+
+            .kyeImgWrapper{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                img{
+                    height: 54%;
+                    width: 35%;
+                    border-radius: 50%;
+                }
+
+                .keyNameDet{
+                    text-align: center;
+                    .keyname{
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                    }
+                    .keyPos{
+                        color: #646464;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .keyPep{
+                .keyQuote{
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:768px){
+    .aboutus{
+        .toph{
+            .imgdivtoph{
+                .toph-title{
+                    top: 35%;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .about-details{
+            padding: 1.5rem 2rem;
+
+            .journey-title{
+                font-size: 1.7rem;
+                text-align: center;
+            }
+
+            .journey-content{
+                text-align: center;
+            }
+
+            .kyePdetails{
+                grid-template-columns: 1fr;
+
+                .kyeImgWrapper{
+
+                    .keyNameDet{
+                        .keyname{
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                .keyPep{
+                    .keyQuote{
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                }
+            }
         }
     }
 }

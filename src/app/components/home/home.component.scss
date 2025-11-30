@@ -234,6 +234,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         cursor: pointer;
+        gap: 0.5rem;
 
         img{
             width: 100%;
@@ -250,14 +251,14 @@
                 left: 1.5rem;
 
                 .oper-comment-num{
-                    color: var(--primaryColor);
+                    color: white;
                     font-size: 3rem;
                     letter-spacing: 1px;
                     font-weight: 700;
                 }
 
                 .oper-comment-title{
-                    color: yellow;
+                    color: white;
                     font-weight: 600;
                     font-size: 1.2rem;
                 }
