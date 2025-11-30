@@ -94,6 +94,15 @@
     margin-bottom: 1rem;
     color: white;
     cursor: pointer;
+
+    .getButton{
+        color: white;
+        background-color: var(--secondColor);
+        border: none;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border-radius: 1rem;
+    }
 }
 
 .sidebarIcon{
