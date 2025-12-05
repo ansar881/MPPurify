@@ -21,7 +21,7 @@ export class FooterComponent implements OnInit {
       }
 
       case 'instagram':{
-        window.open('https://www.instagram.com/free_aqua4all?igsh=MTBsdzdscjdpamhxbA==', '_blank');
+        window.open('https://www.instagram.com/jaaallife?igsh=dzFtcWNtenNnY2pn', '_blank');
         break;
       }
 

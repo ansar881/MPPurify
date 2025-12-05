@@ -43,39 +43,12 @@
         <div class="advTxt-div">
             <div class="advTxt-title">Jaaal Life</div>
             <div class="advTxt-body">
-                <div class="punch-line">
-                    Achieve powerfuBottles for Change aims to create awareness that
-                    USED PLASTIC IS NOT WASTE.
-                    IT HAS VALUE. IT IS RECYCLABLE.
-                </div>
+                <div class="punch-line">{{ punchLine }}</div>
                 <div class="metric-div">
-                    <div class="metric">
-                        <div class="metric-number">10+</div>
-                        <div class="metric-text">Cities</div>
+                    <div class="metric" *ngFor="let met of metricData">
+                        <div class="metric-text">{{met.metricText}}</div>
+                        <div class="metric-number">{{met.metricNumber}}</div>
                     </div>
-                    <div class="metric">
-                        <div class="metric-number">1500+</div>
-                        <div class="metric-text">Hotels and Restaurants</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-number">1800+</div>
-                        <div class="metric-text">Residential</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-number">50+</div>
-                        <div class="metric-text">Educational Institutes</div>
-                    </div>
-
-                    <div class="metric">
-                        <div class="metric-number">1.1 M</div>
-                        <div class="metric-text">Citizens</div>
-                    </div>
-
-                    <div class="metric">
-                        <div class="metric-number">1.1 M</div>
-                        <div class="metric-text">People's Trust</div>
-                    </div>
-
                 </div>
             </div>
         </div>

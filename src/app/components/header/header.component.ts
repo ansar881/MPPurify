@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   }
 
   getInTouch(){
-    window.open('https://forms.gle/FvLWJmxyqFiu4RgTA', '_blank');
+    window.open('https://forms.gle/HEQBQfK1ckYKwqhQ8', '_blank');
   }
   
   tabClicked(type:string, frm = false){

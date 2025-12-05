@@ -9,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   mobileNumber: string = '+91 9776718582';
+  emailAddress: string = "jaaallife@gmail.com"
   constructor() { }
 
   ngOnInit() {
   }
 
   getInTouch(){
-    window.open('https://forms.gle/FvLWJmxyqFiu4RgTA', '_blank');
+    window.open('https://forms.gle/HEQBQfK1ckYKwqhQ8', '_blank');
   }
   
 }
