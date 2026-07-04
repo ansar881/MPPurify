@@ -5,86 +5,124 @@
 }
 
 .contact-sec{
-    @include flex(space-between);
-    margin: 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 8vw, 10rem);
+}
+
+.contactUs-sec,
+.getTouch-sec{
+    min-height: 22rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border: 1px solid #f1f1f1;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.07);
 }
 
 .cont-title,
 .getTouch-title{
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.touchBtn{
-    @include flex(center, center);
-    width: 12rem;
-    padding-block: 0.7rem;
-    background-color: var(--primaryColor);
-    gap: 0.5rem;
-    border-radius: 50px;
-    padding-inline: 1.5rem;
-    cursor: pointer;
-
-    img{
-        width: 1.5rem;
-        filter: invert(1);
-    }
-
-    .touch-text{
-        color: white;
-        font-weight: 700;
-        font-size: 1.3rem;
-    }
-
-    &:hover{
-        background-color: var(--secondColor);
-        box-shadow: 0px 0px 5px grey;
-    }
-}
-
-.getTouch-body{
-    height: 31vh;
-    @include flex(center, center);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 .cont-body{
-    height: 31vh;
-    @include flex(space-around);
+    display: flex;
     flex-direction: column;
-    padding-top: 3rem;
+    gap: 1.3rem;
+    padding-top: 2rem;
 }
 
 .econt-mail{
-    @include flex();
-    gap: 0.5rem;
-    color: grey;
+    @include flex(flex-start, center);
+    gap: 0.75rem;
+    color: #646464;
+    word-break: break-word;
+
     img{
         width: 1.1rem;
+        flex: 0 0 auto;
         filter: opacity(0.5);
     }
 }
 
 .econt-Whatsapp{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
     img{
         width: 9rem;
+        border-radius: 0.5rem;
     }
 
     .Whatsapp-text{
-        color: grey;
+        color: #646464;
     }
 }
 
-@media(max-width:768px){
-    .contact-sec{
-        @include flex(space-between, center);
-        margin: 5rem 10rem;
-        flex-direction: column;
-        margin: 1rem 1rem;
-        gap: 3rem;
+.getTouch-sec{
+    display: flex;
+    flex-direction: column;
+}
+
+.getTouch-body{
+    flex: 1;
+    @include flex(center, center);
+}
+
+.touchBtn{
+    @include flex(center, center);
+    min-width: 12rem;
+    padding: 0.85rem 1.5rem;
+    background-color: var(--primaryColor);
+    gap: 0.65rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+    img{
+        width: 1.25rem;
+        filter: invert(1);
     }
 
-    .getTouch-title{
+    .touch-text{
+        color: white;
+        font-weight: 800;
+        font-size: 1.05rem;
+    }
+
+    &:hover{
+        background-color: var(--secondColor);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+        transform: translateY(-0.15rem);
+    }
+}
+
+@media(max-width: 760px){
+    .contact-sec{
+        grid-template-columns: 1fr;
+        padding-block: 2.5rem;
+    }
+
+    .contactUs-sec,
+    .getTouch-sec{
+        min-height: auto;
+    }
+
+    .getTouch-title,
+    .cont-title{
         text-align: center;
+    }
+
+    .getTouch-body{
+        padding-top: 2rem;
+    }
+
+    .econt-Whatsapp{
+        align-items: center;
     }
 }

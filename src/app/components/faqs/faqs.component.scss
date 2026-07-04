@@ -2,28 +2,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-block: 3rem;
+    gap: 1rem;
+    padding: clamp(3rem, 6vw, 5rem) 1rem;
 }
 
 .faqs{
-    border-bottom: 1px solid #c4c4c4;
-    width: 43vw;
-
-    .faq-title{
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-block: 2rem;
-    }
-
-    .faq-body{
-        margin-bottom: 2rem;
-        font-size: 1.1rem;
-        color: #949494;
-    }
+    width: min(100%, 56rem);
+    padding: 1.4rem clamp(1rem, 3vw, 1.75rem);
+    border: 1px solid #c4c4c4;
+    border-radius: 0.85rem;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-@media(max-width: 768px){
-    .faqs{
-        width: 81vw
-    }
+.faq-title{
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #333333;
+}
+
+.faq-body{
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #646464;
 }

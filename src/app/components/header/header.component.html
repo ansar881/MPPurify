@@ -1,28 +1,28 @@
 <div class="header-comp">
   <div class="hcontain-wrapper">
-    <div class="sidebarIcon" (click)="toggleSidebar()">
-      <img src="assets/icons/bars-solid.svg">
-    </div>
+    <button class="sidebarIcon" type="button" (click)="toggleSidebar()" aria-label="Open menu">
+      <img src="assets/icons/bars-solid.svg" alt="">
+    </button>
     <div [class.open]="sidebar" class="sidebar">
-      <div class="top" (click)="toggleSidebar()">X <span class="sidebarTitle">Jaaal Life</span></div>
-      <div class="navs" (click)="tabClicked('home', true)">Home</div>
-      <div class="navs" (click)="tabClicked('about', true)">About</div>
-      <div class="navs" (click)="tabClicked('shopp', true)">Products</div>
-      <div class="navs" (click)="tabClicked('greenp', true)">Eco-Bond</div>
-      <div class="navs" (click)="tabClicked('faq', true)">FAQs</div>
-      <div class="navs" (click)="tabClicked('cont', true)">Contact Us</div>
-      <div class="navs"><Button class="getButton" (click)="getInTouch()">GET IN TOUCH</Button></div>
+      <button class="top" type="button" (click)="toggleSidebar()" aria-label="Close menu">X <span class="sidebarTitle">Jaaal Life</span></button>
+      <a class="navs" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSidebar()">Home</a>
+      <a class="navs" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSidebar()">About</a>
+      <a class="navs" routerLink="/shopp" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSidebar()">Products</a>
+      <a class="navs" routerLink="/greenp" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSidebar()">Eco-Bond</a>
+      <a class="navs" routerLink="/faqs" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSidebar()">FAQs</a>
+      <a class="navs" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleSidebar()">Contact Us</a>
+      <div class="navs"><button class="getButton" type="button" (click)="getInTouch()">GET IN TOUCH</button></div>
     </div>
     <div class="title">
-       <img src="assets/logos/jaaal life text Img.png">
+       <img src="assets/logos/jaaal life text Img.png" alt="Jaaal Life">
     </div>
     <div class="tabs">
-      <div class="home tab" [class.active]="isActive('home')" (click)="tabClicked('home')">Home</div>
-      <div class="about tab" [class.active]="isActive('about')" (click)="tabClicked('about')">About</div>
-      <div class="shopp tab" [class.active]="isActive('shopp')" (click)="tabClicked('shopp')">Products</div>
-      <div class="greener tab" [class.active]="isActive('greenp')" (click)="tabClicked('greenp')">Eco-Bond</div>
-      <div class="faq tab" [class.active]="isActive('faq')" (click)="tabClicked('faq')">FAQs</div>
-      <div class="cont tab" [class.active]="isActive('cont')" (click)="tabClicked('cont')">Contact Us</div>
+      <a class="home tab" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="about tab" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a>
+      <a class="shopp tab" routerLink="/shopp" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Products</a>
+      <a class="greener tab" routerLink="/greenp" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Eco-Bond</a>
+      <a class="faq tab" routerLink="/faqs" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">FAQs</a>
+      <a class="cont tab" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contact Us</a>
     </div>
   </div>
   <div class="touch" (click)="getInTouch()">GET IN TOUCH</div>

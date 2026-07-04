@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
+  imports: [RouterLink, RouterLinkActive],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent implements OnInit {
   sidebar:boolean = false;
@@ -59,9 +61,5 @@ export class HeaderComponent implements OnInit {
 
   toggleSidebar() {
     this.sidebar = !this.sidebar;
-  }
-
-  isActive(route: string): boolean {
-    return this.router.url.includes(route);
   }
 }

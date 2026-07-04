@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
   standalone: true,
   imports: [CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
 
@@ -30,6 +31,14 @@ export class HomeComponent implements OnInit {
   // getInTouch(){
   //   window.open('https://forms.gle/FvLWJmxyqFiu4RgTA', '_blank');
   // }
+
+  getInTouch(){
+    window.open('https://forms.gle/HEQBQfK1ckYKwqhQ8', '_blank');
+  }
+
+  exploreImpact(){
+    this.router.navigate(['greenp']);
+  }
 
   advertiseHere(){
     this.router.navigate(['advertise'], {

@@ -1,7 +1,16 @@
 <div class="home-comp">
     <div class="front-section">
         <div class="front-right">
-            <img class="front-img" src="assets/images/AquaFrontImg.png" alt="Brands">
+            <img class="front-img" src="assets/images/AquaFrontImg.png" alt="Brands" fetchpriority="high">
+        </div>
+        <div class="hero-content">
+            <div class="hero-kicker">Pure water. Sustainable reach.</div>
+            <h1>Jaaal Life</h1>
+            <div class="hero-copy">{{ punchLine }}</div>
+            <div class="hero-actions">
+                <button type="button" class="hero-primary" (click)="exploreImpact()">Explore Impact</button>
+                <button type="button" class="hero-secondary" (click)="getInTouch()">Get in Touch</button>
+            </div>
         </div>
     </div>
     <div class="icon-section">
@@ -11,7 +20,7 @@
                     <img class="img-saveWater" src="assets/icons/save-water.png" alt="save water">
                 </div>
                 <div class="icon-title">Save Water</div>
-                <div class="icon-subTitle">Every drop counts—let us deliver purity without waste.</div>
+                <div class="icon-subTitle">Every drop counts - let us deliver purity without waste.</div>
             </div>
             <div class="iconlogo">
                 <div class="img-div">
@@ -25,22 +34,29 @@
                     <img class="img-saveHealth" src="assets/icons/save.png" alt="save health">
                 </div>
                 <div class="icon-title">Save Health</div>
-                <div class="icon-subTitle">Clean water, better living—your health deserves the best.</div>
+                <div class="icon-subTitle">Clean water, better living - your health deserves the best.</div>
             </div>
             <div class="iconlogo">
                 <div class="img-div">
                     <img class="img-saveMoney" src="assets/icons/rupee.png" alt="save money">
                 </div>
                 <div class="icon-title">Save Money</div>
-                <div class="icon-subTitle">Premium water, zero cost—wellness shouldn't come with a price tag</div>
+                <div class="icon-subTitle">Premium water, zero cost - wellness shouldn't come with a price tag</div>
             </div>
         </div>
     </div>
     <div class="adv-section">
         <div class="advimg-div">
-            <img class="advImage" src="assets/images/advimg.jpg">
+            <div class="adv-image-frame">
+                <img class="advImage" src="assets/images/advimg.jpg" loading="lazy" alt="Jaaal Life packaged drinking water">
+            </div>
+            <div class="adv-floating-note">
+                <span class="note-number">1M</span>
+                <span class="note-text">people trust our pure water promise</span>
+            </div>
         </div>
         <div class="advTxt-div">
+            <div class="section-eyebrow">Trusted hydration network</div>
             <div class="advTxt-title">Jaaal Life</div>
             <div class="advTxt-body">
                 <div class="punch-line">{{ punchLine }}</div>
@@ -53,46 +69,63 @@
             </div>
         </div>
     </div>
-    <div class="opertional-section">
+    <div class="operational-section">
         <div class="oper-title">
+            <div class="section-eyebrow">Our footprint</div>
             <div class="oper-main-title">Sowing Seeds of Goodness</div>
             <div class="oper-sub-title">Inspiring a new mindset across the nation</div>
         </div>
         <div class="oper-img">
             <div class="oper-img1 opImdiv">
-                <img class="operImg1 opIm" src="assets/images/operational-plant-f.jpg">
+                <img class="operImg1 opIm" src="assets/images/operational-plant-f.jpg" loading="lazy" alt="Operational plant">
                 <div class="oper-comment-div">
                     <div class="oper-comment-num">1</div>
                     <div class="oper-comment-title">OPERATIONAL PLANTS</div>
                 </div>
             </div>
             <div class="oper-img2 opImdiv">
-                <img class="operImg2 opIm" src="assets/images/water-distributors.jpg">
+                <img class="operImg2 opIm" src="assets/images/water-distributors.jpg" loading="lazy" alt="Water distributors">
                 <div class="oper-comment-div">
                     <div class="oper-comment-num">25+</div>
                     <div class="oper-comment-title">DISTRIBUTORS</div>
                 </div>
             </div>
             <div class="oper-img3 opImdiv">
-                <img class="operImg3 opIm" src="assets/images/water-load-truck.png">
+                <img class="operImg3 opIm" src="assets/images/water-load-truck.png" loading="lazy" alt="Distribution carrier">
                 <div class="oper-comment-div">
                     <div class="oper-comment-num">10</div>
                     <div class="oper-comment-title">DISTRIBUTION CARRIER</div>
                 </div>
             </div>
             <div class="oper-img4 opImdiv">
-                <img class="operImg4 opIm" src="assets/images/adv-water-bottle.jpg">
+                <img class="operImg4 opIm" src="assets/images/adv-water-bottle.jpg" loading="lazy" alt="Packaged drinking water bottle">
                 <div class="oper-comment-div">
                     <div class="oper-comment-num">1</div>
                     <div class="oper-comment-title">OPERATIONAL PLANTS</div>
                 </div>
             </div>
         </div>
-        <div class="oper-about">
-            A symbol of goodness, trust and purity, Jaaal Life has been a household name for decades.
-            A leader in its category, it is the most trusted brand of packaged drinking water in India.
-            Having a strong presence, with a operational plant and a strong distribution network of 25+ Distributors & 10 Distribution trucks across India & neighbouring countries,
-            Jaaal Life stands true to its promise of providing safe, pure & healthy water to consumers from last years.
+        <div class="oper-about-panel">
+            <div class="oper-about">
+                A symbol of goodness, trust and purity, Jaaal Life has been a household name for decades.
+                A leader in its category, it is the most trusted brand of packaged drinking water in India.
+                Having a strong presence, with a operational plant and a strong distribution network of 25+ Distributors & 10 Distribution trucks across India & neighbouring countries,
+                Jaaal Life stands true to its promise of providing safe, pure & healthy water to consumers from last years.
+            </div>
+            <div class="oper-highlights">
+                <div class="oper-highlight">
+                    <span>Safe</span>
+                    <strong>Purified at source</strong>
+                </div>
+                <div class="oper-highlight">
+                    <span>Fast</span>
+                    <strong>Local distribution</strong>
+                </div>
+                <div class="oper-highlight">
+                    <span>Clean</span>
+                    <strong>Sustainable choices</strong>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <div class="getintouch-section">

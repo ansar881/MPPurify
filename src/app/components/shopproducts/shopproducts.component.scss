@@ -4,118 +4,109 @@
     align-items: $align;
 }
 
-.shop-products{
-    .shop-init-section{
-        padding-inline: 2rem;
-        padding-block: 3rem;
-        .shop-title{
-            text-align: center;
-        }
-        
-        .shop-main-title{
-            font-family: "Story Script", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 3rem;
-            font-weight: 600;
-            letter-spacing: 3px;
-            color: var(--primaryColor);
-        }
-
-        .shop-sub-title{
-            margin-block: 1.5rem;
-            color: grey;
-            letter-spacing: 1px;
-        }
-
-        .shop-img{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-
-            .shpmdiv{
-                border-radius: 1rem;
-                background-color: #ceffce;
-                padding-bottom: 1.5rem;
-                cursor: pointer;
-                &:hover{
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                    transform: scale(1.05);
-                    transition: all 0.5s ease;
-                }
-                .shop-product-details{
-                    @include flex(center, center);
-                    flex-direction: column;
-                    gap: 0.5rem;
-                    margin-top: 1.5rem;
-                    .shop-product-name{
-                        font-weight: 700;
-                        font-size: 1rem;
-                    }
-                    .shop-product-qty{
-                        @include flex(center, center);
-                        .shop-qty{
-                            font-weight: 800;
-                            font-size: 1.5rem;
-                            width: 7rem;
-                            background-color: var(--primaryColor);
-                            color: white;
-                            border-radius: 0.9rem;
-                            padding: 3px;
-                            text-align: center;
-                        }
-                    }
-                    .shop-product-price{
-                        font-weight: 900;
-                        font-size: 1.6rem;
-                    }
-                }
-            }
-
-            img{
-                width: 100%;
-                border-radius: 1rem 1rem 0 0;
-                height: 57vh;
-            }
-        }
-    }
-    
+.shop-init-section{
+    padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 5vw, 5rem);
 }
 
-@media(max-width:768px){
-    .shop-products{
-        .shop-init-section{
-            padding: 1rem;
-            .shop-title{
-                .shop-main-title{
-                    font-size: 2.3rem;
-                }
-            }
+.shop-title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-            .shop-sub-title{
-                margin-block: 1rem;
-            }
+.shop-main-title{
+    font-family: "Story Script", sans-serif;
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--primaryColor);
+}
 
-            .shop-img{
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
+.shop-sub-title{
+    margin-top: 0.75rem;
+    color: grey;
+}
 
-                .shpmdiv{
-                    padding-bottom: 1rem;
-                    &:hover{
-                        transform: none;
-                    }
-                    .shop-product-details{
-                        .shop-product-name{
-                            text-align: center;
-                        }
-                    }
-                }
+.shop-img{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+}
 
-                img{
-                    height: 45vh;
-                }
-            }
-        }
+.shpmdiv{
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: #ceffce;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.shpmdiv:hover{
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.16);
+    transform: translateY(-0.35rem);
+}
+
+.shpm{
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.shop-product-details{
+    @include flex(center, center);
+    flex-direction: column;
+    gap: 0.75rem;
+    min-height: 11rem;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.shop-product-name{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.shop-product-qty{
+    @include flex(center, center);
+}
+
+.shop-qty{
+    font-weight: 800;
+    font-size: 1.25rem;
+    min-width: 6.5rem;
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 999px;
+    padding: 0.35rem 0.75rem;
+    text-align: center;
+}
+
+.shop-product-price{
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+@media(max-width: 1024px){
+    .shop-img{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width: 640px){
+    .shop-init-section{
+        padding-block: 2.5rem;
+    }
+
+    .shop-img{
+        grid-template-columns: 1fr;
+    }
+
+    .shpmdiv:hover{
+        transform: none;
+    }
+
+    .shpm{
+        aspect-ratio: 16 / 11;
     }
 }

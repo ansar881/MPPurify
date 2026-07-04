@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-faqs',
   templateUrl: './faqs.component.html',
   styleUrls: ['./faqs.component.scss'],
   standalone: true,
-  imports:[CommonModule]
+  imports:[CommonModule],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FaqsComponent implements OnInit {
 
