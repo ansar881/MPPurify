@@ -1,24 +1,142 @@
-<div class="aboutus">
-    <div class="toph">
-        <div class="imgdivtoph">
-            <img src="assets/images/green tree desktop.jpg" alt="About Us Image" fetchpriority="high">
-            <div class="toph-title">{{tophTitle}}</div>
-        </div>
+<div class="about-container">
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="hero-bg-wrapper">
+      <img src="assets/images/green tree desktop.jpg" alt="Nature and purity background" fetchpriority="high">
     </div>
-    <div class="about-details">
-        <div class="journey-title">{{juorneyTitle}}</div>
-        <div class="journey-content">{{journeyContent}}</div>
-        <div class="kyePdetails">
-            <div class="kyeImgWrapper">
-                <img class="kyeImg" src="assets/images/papu_img-f2.png" alt="Key Image" loading="lazy">
-                <div class="keyNameDet">
-                    <div class="keyname">Mirza Parhan Beg</div>
-                    <div class="keyPos">Founder, CEO & MD</div>
-                </div>
-            </div>
-            <div class="keyPep">
-                <i><div class="keyQuote">{{ceoQuote}}</div></i>
-            </div>
-        </div>
+    <div class="hero-content">
+      <div class="badge-pill">OUR MISSION</div>
+      <h1 class="hero-main-title">Delivering Purity, One Drop at a Time</h1>
+      <p class="hero-sub-title">A Legacy of Trust, Innovation, and Care That Hydrates Millions Every Day</p>
     </div>
+  </section>
+
+  <!-- Stats Highlight Section -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">
+          <img src="assets/icons/save-water.png" alt="Users Icon" class="stat-icon">
+        </div>
+        <div class="stat-number">1M+</div>
+        <div class="stat-label">Happy Lives Hydrated</div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">
+          <img src="assets/icons/handshake-solid.svg" alt="Distributors Icon" class="stat-icon">
+        </div>
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Trusted Distributors</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">
+          <img src="assets/icons/truck-solid.svg" alt="Carriers Icon" class="stat-icon">
+        </div>
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Delivery Carriers</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">
+          <img src="assets/icons/plant.png" alt="Plants Icon" class="stat-icon">
+        </div>
+        <div class="stat-number">1</div>
+        <div class="stat-label">Eco-Smart Plant</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey (Story) Section -->
+  <section class="journey-section">
+    <div class="journey-grid">
+      <div class="journey-image-wrapper">
+        <img class="journey-main-img" src="assets/images/advimg.jpg" alt="Jaaal Life Pure Water" loading="lazy">
+        <div class="journey-img-backdrop"></div>
+        <div class="journey-floating-card">
+          <span class="floating-title">100% Pure</span>
+          <span class="floating-sub">Rigorous Quality Checks</span>
+        </div>
+      </div>
+      <div class="journey-text-wrapper">
+        <span class="section-eyebrow">OUR LEGACY</span>
+        <h2 class="journey-heading">{{ juorneyTitle }}</h2>
+        <div class="journey-body">
+          <p>{{ journeyContent }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Section -->
+  <section class="values-section">
+    <div class="section-header">
+      <span class="section-eyebrow">WHAT WE STAND FOR</span>
+      <h2 class="section-heading">Our Core Pillars</h2>
+      <p class="section-subheading">We guide every single operation with integrity, ecological awareness, and extreme dedication to consumer health.</p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon-container bg-blue">
+          <img src="assets/icons/shield-heart-solid.svg" alt="Purity & Safety" class="value-icon">
+        </div>
+        <h3 class="value-title">Absolute Purity</h3>
+        <p class="value-desc">Every drop goes through a state-of-the-art purification process, ensuring absolute safety and balanced minerals.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon-container bg-green">
+          <img src="assets/icons/plant.png" alt="Sustainability" class="value-icon">
+        </div>
+        <h3 class="value-title">Eco-Smart Sourcing</h3>
+        <p class="value-desc">We minimize waste and promote sustainability with recyclable materials, safeguarding the environment for future generations.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon-container bg-orange">
+          <img src="assets/icons/hand-holding-droplet-solid.svg" alt="Care" class="value-icon">
+        </div>
+        <h3 class="value-title">Community Care</h3>
+        <p class="value-desc">We believe clean water is a human right. We work actively to expand affordable, pure water access to everyone.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon-container bg-purple">
+          <img src="assets/icons/handshake-solid.svg" alt="Trust" class="value-icon">
+        </div>
+        <h3 class="value-title">Unyielding Trust</h3>
+        <p class="value-desc">For years, families have trusted Jaaal Life. We honor that trust with consistent quality and dependable delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership / CEO Quote Section -->
+  <section class="ceo-section">
+    <div class="ceo-card">
+      <div class="ceo-quote-layout">
+        <div class="ceo-profile-col">
+          <div class="ceo-avatar-frame">
+            <img class="ceo-avatar" src="assets/images/papu_img-f2.png" alt="Mirza Parhan Beg - Founder, CEO & MD" loading="lazy">
+            <div class="ceo-avatar-ring"></div>
+          </div>
+          <div class="ceo-identity">
+            <h4 class="ceo-name">Mirza Parhan Beg</h4>
+            <p class="ceo-title">Founder, CEO & MD</p>
+          </div>
+        </div>
+        <div class="ceo-quote-col">
+          <div class="quote-mark">“</div>
+          <blockquote class="ceo-blockquote">
+            <p class="ceo-quote-text">{{ ceoQuote }}</p>
+          </blockquote>
+          <div class="ceo-signoff">
+            <span class="signoff-line"></span>
+            <span class="signoff-label">Leading Jaaal Life with Pride</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
